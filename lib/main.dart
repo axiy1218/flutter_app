@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/lesson7/custom_text_field_view.dart';
-import 'package:flutter_app/lesson7/login_page.dart';
+import 'package:flutter_app/lesson7/speed_page.dart';
 
 /*
 Created by Axmadjon Isaqov on 15:38:20 24.01.2023
@@ -25,7 +24,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: const LoginPage(),
+      home: const SpeedPage(),
     );
   }
 }
