@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/lesson8/rail_view.dart';
+import 'package:flutter_app/lesson8/slivers/slivers_page.dart';
 
 /*
 Created by Axmadjon Isaqov on 15:38:20 24.01.2023
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: const RailView(),
+      home: const SliversPage(),
     );
   }
 }
