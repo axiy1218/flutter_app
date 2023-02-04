@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/lesson10/intro_second_page.dart';
+import 'package:flutter_app/lesson10/lesson_page.dart';
 import 'package:flutter_app/lesson8/slivers/slivers_page.dart';
 
 /*
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: const SliversPage(),
+      home: const IntroSecondPage(),
     );
   }
 }
