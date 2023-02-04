@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+final _scaffoldKey = GlobalKey<ScaffoldState>();
+
 class SliversPage extends StatefulWidget {
   const SliversPage({super.key});
 
@@ -12,6 +14,8 @@ class _SliversPageState extends State<SliversPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
+      drawer: const Drawer(),
       backgroundColor: const Color(0xFFE9E9EA),
       body: CupertinoTabScaffold(
         tabBar: CupertinoTabBar(
@@ -32,12 +36,19 @@ class _SliversPageState extends State<SliversPage> {
               //& sliver app bar
               SliverAppBar(
                 centerTitle: true,
+                leading: Container(),
                 backgroundColor: Colors.transparent,
                 elevation: .0,
                 title: const Text('Shaxsiy kabinet'),
                 actions: [
                   IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        if (_scaffoldKey.currentState!.isDrawerOpen) {
+                          _scaffoldKey.currentState!.closeDrawer();
+                        } else {
+                          _scaffoldKey.currentState!.openDrawer();
+                        }
+                      },
                       icon: const Icon(CupertinoIcons.settings))
                 ],
                 primary: true,
